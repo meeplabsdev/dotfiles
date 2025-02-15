@@ -44,10 +44,10 @@ fi
 
 # Install hyprland
 if ! command -v hyprctl &> /dev/null; then
-    sudo pacman -S hyprland
+    sudo pacman -Sy hyprland
 fi
 
 # Install kitty
 if ! command -v kitty &> /dev/null; then
-    sudo pacman -S kitty
+    sudo pacman -Sy kitty
 fi
