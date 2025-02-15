@@ -18,12 +18,13 @@ if [[ $EUID -eq 0 ]]; then
 	done
 
 	useradd -m -s /bin/bash "$USER_NAME"
+	usermod -aG sudo "$USER_NAME"
 	echo "$USER_NAME:$PASSWORD" | chpasswd	
     fi
 
     cp "$0" "/home/$USER_NAME/$0"
     chown "$USER_NAME:$USER_NAME" "/home/$USER_NAME/$0"
-    sudo -u "$USER_NAME" bash -c "exec $0"
+    sudo -u "$USER_NAME" bash -c "exec /home/$USER_NAME/$0"
     exit 0
 fi
 
