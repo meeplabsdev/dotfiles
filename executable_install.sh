@@ -61,7 +61,7 @@ if ! pacman -Q llvm | grep -q "18.1.8-5"; then
 fi
 
 # Install once-and-done software
-sudo pacman -S --needed --noconfirm kitty mako pipewire wireplumber xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland xorg-server xorg-server-common
+sudo pacman -S --needed --noconfirm kitty mako pipewire wireplumber xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts
 
 # Install hyprland
 if ! command -v hyprctl &> /dev/null; then
