@@ -27,7 +27,7 @@ if [[ $EUID -eq 0 ]]; then
 
     cp "$0" "/home/$USER_NAME/$0"
     chown "$USER_NAME:$USER_NAME" "/home/$USER_NAME/$0"
-    sudo -u "$USER_NAME" bash -c "exec /home/$USER_NAME/$0"
+    sudo -u "$USER_NAME" bash -c "cd /home/$USER_NAME && bash $0"
     exit 0
 fi
 
