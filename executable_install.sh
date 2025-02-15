@@ -51,7 +51,7 @@ if ! pacman -Q mesa | grep -q "1:24.2.7-1"; then
 fi
 
 # Install llvm
-sudo pacman -S llvm18 llvm18-libs
+sudo pacman -S --noconfirm llvm18 llvm18-libs
 if ! pacman -Q llvm | grep -q "18.1.8-5"; then
     curl -O "https://archive.archlinux.org/packages/l/llvm/llvm-18.1.8-5-x86_64.pkg.tar.zst"
     sudo pacman -U --noconfirm "llvm-18.1.8-5-x86_64.pkg.tar.zst"
