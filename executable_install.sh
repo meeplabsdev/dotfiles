@@ -1,10 +1,30 @@
 #!/bin/bash
 
-# Add "six" user
-USER_NAME="six"
-if ! id -u "$USER_NAME" > /dev/null 2>&1; then
-    useradd -m -s /bin/bash "$USER_NAME"
+if [[ $EUID -eq 0 ]]; then
+    USER_NAME="six"
+
+    if ! id -u "$USER_NAME" > /dev/null 2>&1; then
+	while true; do
+	    read -s -p "Enter password for new user '$USER_NAME': " PASSWORD
+	    echo
+	    read -s -p "Confirm password: " CONFIRM_PASSWORD
+	    echo
+
+	    if [ "$PASSWORD" == "$CONFIRM_PASSWORD" ]; then
+		break
+	    else
+		echo "Passwords do not match. Please try again."
+	    fi
+	done
+
+	useradd -m -s /bin/bash "$USER_NAME"
+	echo "$USER_NAME:$PASSWORD" | chpasswd	
+    fi
+
+    sudo -u "$USER_NAME" bash -c "exec $0"
+    exit 0
 fi
+
 
 # Install yay
 if ! command -v yay > /dev/null; then
