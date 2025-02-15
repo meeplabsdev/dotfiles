@@ -42,12 +42,5 @@ if ! command -v yay &> /dev/null; then
     rm -rf yay
 fi
 
-# Install hyprland
-if ! command -v hyprctl &> /dev/null; then
-    sudo pacman -Sy hyprland
-fi
-
-# Install kitty
-if ! command -v kitty &> /dev/null; then
-    sudo pacman -Sy kitty
-fi
+# Install other software
+sudo pacman -S --noconfirm hyprland kitty
