@@ -42,5 +42,10 @@ if ! command -v yay &> /dev/null; then
     rm -rf yay
 fi
 
-# Install other software
-sudo pacman -S --noconfirm hyprland kitty
+# Install hyprland
+if ! command -v hyprctl &> /dev/null; then
+    sudo pacman -S --noconfirm hyprland nvidia-dkms nvidia-utils egl-wayland libva-nvidia-driver
+fi
+
+# Install once-and-done software
+sudo pacman -S --noconfirm kitty
