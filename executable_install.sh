@@ -41,11 +41,6 @@ if ! command -v yay &> /dev/null; then
     rm -rf yay
 fi
 
-# Install hyprland
-if ! command -v hyprctl &> /dev/null; then
-    sudo pacman -S --noconfirm hyprland nvidia-dkms nvidia-utils egl-wayland libva-nvidia-driver
-fi
-
 # Install mesa
 if ! pacman -Q mesa | grep -q "1:24.2.7-1"; then
     curl -O "https://archive.archlinux.org/packages/m/mesa/mesa-1:24.2.7-1-x86_64.pkg.tar.zst"
@@ -56,6 +51,7 @@ if ! pacman -Q mesa | grep -q "1:24.2.7-1"; then
 fi
 
 # Install llvm
+sudo pacman -S llvm18 llvm18-libs
 if ! pacman -Q llvm | grep -q "18.1.8-5"; then
     curl -O "https://archive.archlinux.org/packages/l/llvm/llvm-18.1.8-5-x86_64.pkg.tar.zst"
     sudo pacman -U --noconfirm "llvm-18.1.8-5-x86_64.pkg.tar.zst"
@@ -66,3 +62,8 @@ fi
 
 # Install once-and-done software
 sudo pacman -S --needed --noconfirm kitty mako pipewire wireplumber xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland xorg-server xorg-server-common
+
+# Install hyprland
+if ! command -v hyprctl &> /dev/null; then
+    sudo pacman -S --noconfirm hyprland nvidia-dkms nvidia-utils egl-wayland libva-nvidia-driver
+fi
