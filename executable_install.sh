@@ -34,10 +34,10 @@ fi
 
 # Install yay
 if ! command -v yay > /dev/null; then
-    sudo pacman -S --needed base-devel
+    sudo pacman -S --needed base-devel -y
     git clone https://aur.archlinux.org/yay.git
     cd yay
-    makepkg -si
+    makepkg -si --noconfirm
     cd ..
-    rm -r yay
+    rm -rf yay
 fi
