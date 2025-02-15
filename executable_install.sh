@@ -27,8 +27,7 @@ if [[ $EUID -eq 0 ]]; then
 
     cp "$0" "/home/$USER_NAME/$0"
     chown "$USER_NAME:$USER_NAME" "/home/$USER_NAME/$0"
-    sudo -u "$USER_NAME" bash -c "cd /home/$USER_NAME && bash $0"
-    exit 0
+    reboot
 fi
 
 
@@ -47,5 +46,23 @@ if ! command -v hyprctl &> /dev/null; then
     sudo pacman -S --noconfirm hyprland nvidia-dkms nvidia-utils egl-wayland libva-nvidia-driver
 fi
 
+# Install mesa
+if ! pacman -Q mesa | grep -q "1:24.2.7-1"; then
+    curl -O "https://archive.archlinux.org/packages/m/mesa/mesa-1:24.2.7-1-x86_64.pkg.tar.zst"
+    sudo pacman -U --noconfirm "mesa-1:24.2.7-1-x86_64.pkg.tar.zst"
+    if ! grep -q "^IgnorePkg.*mesa" "/etc/pacman.conf"; then
+	sudo sed -i '/^#IgnorePkg/a IgnorePkg = mesa' "/etc/pacman.conf"
+    fi
+fi
+
+# Install llvm
+if ! pacman -Q llvm | grep -q "18.1.8-5"; then
+    curl -O "https://archive.archlinux.org/packages/l/llvm/llvm-18.1.8-5-x86_64.pkg.tar.zst"
+    sudo pacman -U --noconfirm "llvm-18.1.8-5-x86_64.pkg.tar.zst"
+    if ! grep -q "^IgnorePkg.*llvm" "/etc/pacman.conf"; then
+	sudo sed -i '/^#IgnorePkg/a IgnorePkg = llvm' "/etc/pacman.conf"
+    fi
+fi
+
 # Install once-and-done software
-sudo pacman -S --noconfirm kitty
+sudo pacman -S --needed --noconfirm kitty mako pipewire wireplumber xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland xorg-server xorg-server-common
