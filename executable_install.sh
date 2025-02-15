@@ -18,8 +18,11 @@ if [[ $EUID -eq 0 ]]; then
 	done
 
 	useradd -m -s /bin/bash "$USER_NAME"
-	usermod -aG sudo "$USER_NAME"
 	echo "$USER_NAME:$PASSWORD" | chpasswd	
+    fi
+
+    if ! grep -q "^$USER_NAME " /etc/sudoers; then
+	echo "$USER_NAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
     fi
 
     cp "$0" "/home/$USER_NAME/$0"
