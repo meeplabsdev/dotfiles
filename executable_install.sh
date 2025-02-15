@@ -33,11 +33,21 @@ fi
 
 
 # Install yay
-if ! command -v yay > /dev/null; then
+if ! command -v yay &> /dev/null; then
     sudo pacman -S --needed base-devel -y
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si --noconfirm
     cd ..
     rm -rf yay
+fi
+
+# Install hyprland
+if ! command -v hyprctl &> /dev/null; then
+    sudo pacman -S hyprland
+fi
+
+# Install kitty
+if ! command -v kitty &> /dev/null; then
+    sudo pacman -S kitty
 fi
