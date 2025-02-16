@@ -56,8 +56,7 @@ exec swayidle -w \
 
 ### Input configuration
 input * {
-    xkb_layout "uk"
-    xkb_variant "qwerty"
+    xkb_layout "gb"
 }
 
 ### Key bindings
@@ -199,7 +198,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 
 #
 # Status Bar:
