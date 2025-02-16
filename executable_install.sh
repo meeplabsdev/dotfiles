@@ -42,24 +42,14 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Install mesa
-#if ! pacman -Q mesa | grep -q "1:24.2.7-1"; then
-#    curl -O "https://archive.archlinux.org/packages/m/mesa/mesa-1:24.2.7-1-x86_64.pkg.tar.zst"
-#    sudo pacman -U --noconfirm "mesa-1:24.2.7-1-x86_64.pkg.tar.zst"
-#    if ! grep -q "^IgnorePkg.*mesa" "/etc/pacman.conf"; then
-#	sudo sed -i '/^#IgnorePkg/a IgnorePkg = mesa' "/etc/pacman.conf"
-#    fi
-#fi
-
-# Install llvm
-#sudo pacman -S --needed --noconfirm llvm18 llvm18-libs
-#if ! pacman -Q llvm | grep -q "18.1.8-5"; then
-#    curl -O "https://archive.archlinux.org/packages/l/llvm/llvm-18.1.8-5-x86_64.pkg.tar.zst"
-#    sudo pacman -U --noconfirm "llvm-18.1.8-5-x86_64.pkg.tar.zst"
-#    if ! grep -q "^IgnorePkg.*llvm" "/etc/pacman.conf"; then
-#	sudo sed -i '/^#IgnorePkg/a IgnorePkg = llvm' "/etc/pacman.conf"
-#    fi
-#fi
+if ! pacman -Q mesa | grep -q "1:24.2.7-1"; then
+    curl -O "https://archive.archlinux.org/packages/m/mesa/mesa-1:24.2.7-1-x86_64.pkg.tar.zst"
+    sudo pacman -U --noconfirm "mesa-1:24.2.7-1-x86_64.pkg.tar.zst"
+    if ! grep -q "^IgnorePkg.*mesa" "/etc/pacman.conf"; then
+	sudo sed -i '/^#IgnorePkg/a IgnorePkg = mesa' "/etc/pacman.conf"
+    fi
+fi
 
 # Install once-and-done software
-sudo pacman -S --needed --noconfirm kitty pipewire wireplumber wayland qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts
+sudo pacman -S --needed --noconfirm kitty pipewire wireplumber wayland qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts llvm llvm-libs
 yay -S --needed --noconfirm downgrade swayfx nvidia-open-dkms nvidia-utils libva-nvidia-drivers vulkan-nouveau
