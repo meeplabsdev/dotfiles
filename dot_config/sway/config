@@ -39,6 +39,7 @@ scratchpad_minimize enable
 
 ### Setup
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+exec xtdb -load ~/.Xresources
 
 ### Output configuration
 #
