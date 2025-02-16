@@ -23,7 +23,6 @@ blur enable
 blur_xray disable
 blur_passes 2
 blur_radius 5
-blur_noise 3
 
 shadows disable
 shadows_on_csd disable
