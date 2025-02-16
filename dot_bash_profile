@@ -6,5 +6,5 @@
 
 if uwsm check may-start && uwsm select; then
     exec uwsm start default
-    exec uwsm start sway
+    exec uwsm start sway -- --unsupported-gpu
 fi
