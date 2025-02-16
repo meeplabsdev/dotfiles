@@ -61,11 +61,13 @@ if ! pacman -Q llvm | grep -q "18.1.8-5"; then
 fi
 
 # Install once-and-done software
-sudo pacman -S --needed --noconfirm kitty mako pipewire wireplumber xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts
+sudo pacman -S --needed --noconfirm kitty mako pipewire wireplumber xdg-desktop-portal-hyprland hyprpolkitagent wayland qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts
 yay -S --needed --noconfirm downgrade
 
 # Install hyprland
 if ! command -v hyprctl &> /dev/null; then
-    sudo pacman -S --noconfirm hyprland nvidia nvidia-utils
-    sudo downgrade hyprland nvidia nvidia-utils
+    sudo pacman -S --noconfirm --needed egl-wayland
+    yay -S --noconfirm --needed hyprland libva-nvidia-drivers
+    sudo pacman -Rs nvidia-utils
+    sudo downgrade nvidia-open-dkms nvidia-utils
 fi
