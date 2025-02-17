@@ -82,6 +82,9 @@ input * {
     # Start your launcher
     bindsym $mod+r exec $menu
 
+    # Take a screenshot
+    bindsym Print exec sway-screenshot -m region --clipboard-only
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
