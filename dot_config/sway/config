@@ -41,6 +41,7 @@ scratchpad_minimize enable
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec xtdb -load ~/.Xresources
 exec walker --gapplication-service
+exec swayosd-server
 exec_always uwsm start default
 
 ### Output configuration
@@ -119,6 +120,26 @@ input * {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+#
+# Volume etc
+#
+    # Sink volume raise optionally with --device
+    bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+    # Sink volume lower optionally with --device
+    bindsym XF86AudioLowerVolume exec  swayosd-client --output-volume lower
+    # Sink volume toggle mute
+    bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+    # Source volume toggle mute
+    bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
+
+    # Capslock (If you don't want to use the backend)
+#    bindsym --release Caps_Lock exec swayosd-client --caps-lock
+
+    # Brightness raise
+    bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
+    # Brightness lower
+    bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
 #
 # Workspaces:
 #
