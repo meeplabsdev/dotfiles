@@ -42,7 +42,7 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Install once-and-done software
-sudo pacman -S --needed --noconfirm kitty pipewire wireplumber wayland qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts llvm llvm-libs meson wayland-protocols pcre2 json-c pango cairo gdk-pixbuf2 swaybg nvidia nvidia-dkms nvidia-utils vulkan-nouveau libdrm pixman polkit xdg-desktop-portal-wlr pipewire-jack waybar mpv uwsm otf-font-awesome python-pywal swaync code
+sudo pacman -S --needed --noconfirm kitty pipewire wireplumber wayland qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts llvm llvm-libs meson wayland-protocols pcre2 json-c pango cairo gdk-pixbuf2 swaybg nvidia nvidia-dkms nvidia-utils vulkan-nouveau libdrm pixman polkit xdg-desktop-portal-wlr pipewire-jack waybar mpv uwsm otf-font-awesome python-pywal swaync code 
 yay -S --needed --noconfirm downgrade sway-nvidia wlroots libva-nvidia-driver swaylock-git swayidle-git clipman sway-screenshot rustup persway wdisplays-git swayosd-git wlogout walker firefox coppwr-bin python-pywalfox hyprpicker
 
 # Finalise
