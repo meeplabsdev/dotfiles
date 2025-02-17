@@ -17,7 +17,7 @@ default_border none
 
 ### Setup
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
-exec wal -R
+exec wal -i "/home/six/wallpapers" -n && pywalfox update && bash -c 'swaybg -i "$(< "${HOME}/.cache/wal/wal")" & disown'
 exec xtdb -load ~/.Xresources
 exec walker --gapplication-service
 exec swayosd-server
