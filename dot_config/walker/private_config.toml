@@ -1,14 +1,14 @@
-app_launch_prefix = ""
+app_launch_prefix = "uwsm app -- "
 terminal_title_flag = ""
 locale = ""
-close_when_open = false
+close_when_open = true
 theme = "default"
 monitor = ""
 hotreload_theme = false
 as_window = false
 timeout = 0
 disable_click_to_close = false
-force_keyboard_focus = false
+force_keyboard_focus = true
 
 [keys]
 accept_typeahead = ["tab"]
