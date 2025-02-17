@@ -15,11 +15,11 @@
         "network"
     ],
     "sway/workspaces": {
-        "format": "{icon} {name}",
+        "format": "{icon}{name}",
         "format-icons": {
-            "urgent": "",
-            "focused": "",
-            "default": ""
+            "urgent": "󰀨",
+            "focused": "󰝥",
+            "default": "󰝦"
         }
     },
     "custom/notification": {
@@ -73,7 +73,7 @@
             "memory",
             "temperature",
             "custom/endpoint"
-        ],
+        ]
     },
     "custom/colorpicker": {
         "format": "{}",
@@ -84,7 +84,7 @@
         "signal": 1
     },
     "cpu": {
-        "format": "󰻠",
+        "format": "󰍛",
         "tooltip": true
     },
     "memory": {
@@ -92,10 +92,10 @@
     },
     "temperature": {
         "critical-threshold": 80,
-        "format": "",
+        "format": ""
     },
     "tray": {
         "icon-size": 14,
         "spacing": 10
-    },
+    }
 }
