@@ -48,3 +48,6 @@ yay -S --needed --noconfirm downgrade swayfx wlroots libva-nvidia-driver swayloc
 # Finalise
 sudo systemctl set-default graphical.target
 sudo systemctl enable swayosd-libinput-backend.service
+sudo usermod -a -G video $USER
+
+reboot
