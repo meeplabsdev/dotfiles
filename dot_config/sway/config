@@ -40,6 +40,7 @@ scratchpad_minimize enable
 ### Setup
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec xtdb -load ~/.Xresources
+exec walker --gapplication-service
 exec_always uwsm start default
 
 ### Output configuration
@@ -71,7 +72,7 @@ input * {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec uwsm app -T
+    bindsym $mod+Return exec uwsm app kitty
 
     # Kill focused window
     bindsym $mod+c kill
