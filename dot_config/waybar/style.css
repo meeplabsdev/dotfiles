@@ -46,7 +46,8 @@ tooltip {
 #battery:hover,
 #cpu:hover,
 #memory:hover,
-#temperature:hover {
+#temperature:hover,
+#custom-colorpicker:hover {
     transition: all .3s ease;
     color: @color9;
 }
@@ -61,13 +62,6 @@ tooltip {
     padding: 0px 5px;
     color: @color7;
     transition: all .3s ease;
-}
-
-#custom-pacman {
-    padding: 0px 5px;
-    transition: all .3s ease;
-    color: @color7;
-
 }
 
 #workspaces {
@@ -111,13 +105,10 @@ tooltip {
     text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
 }
 
-#custom-colorpicker {
-    padding: 0px 5px;
-}
-
 #cpu,
 #memory,
-#temperature {
+#temperature,
+#custom-colorpicker {
     padding: 0px 5px;
     transition: all .3s ease;
     color: @color7;
