@@ -10,3 +10,6 @@ export GTK_THEME=Adwaita:dark
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
+
+cat ~/.cache/wal/sequences
+source ~/.cache/wal/colors-tty.sh
