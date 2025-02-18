@@ -18,11 +18,13 @@ gaps inner 10
 
 ### Setup
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
-exec killall swaybg || true && bash -c 'swaybg & disown' && wal -i "${HOME}/wallpapers" -n && pywalfox update && bash -c 'swaybg -i "$(< "${HOME}/.cache/wal/wal")" & disown'
+exec swaybg
 exec xtdb -load ~/.Xresources
 exec walker --gapplication-service
 exec swayosd-server
 exec persway daemon -w -e 'spiral opacity 1' -f 'spiral opacity 0.95; opacity 1' -l 'mark --add _prev' -d spiral
+exec killall swaybg || true && bash -c 'swaybg & disown' && wal -i "${HOME}/wallpapers" -n && pywalfox update && bash -c 'swaybg -i "$(< "${HOME}/.cache/wal/wal")" & disown'
+exec uwsm start firefox
 exec_always uwsm start default
 
 ### Output configuration
