@@ -26,6 +26,7 @@ else
 fi
 
 export ARCHFLAGS="-arch $(uname -m)"
+alias ca="chezmoi add"
 alias c="clear && pfetch"
 alias cc=clear
 
