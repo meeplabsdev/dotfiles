@@ -15,12 +15,9 @@ set $menu walker --modules applications
 ### Appearance
 default_border none
 gaps inner 10
-smart_corner_radius on
-corner_radius 15
-blur enable
-blur_xray enable
-blur_passes 2
-blur_radius 5
+corner_radius 10
+blur disable
+blur_xray disable
 blur_brightness 1
 blur_contrast 1
 blur_saturation 1
@@ -30,8 +27,8 @@ dim_inactive_colors.unfocused #000000FF
 dim_inactive_colors.urgent #900000FF
 
 layer_effects "waybar" {
-    blur enable;
-    blur_xray enable;
+    blur disable;
+    blur_xray disable;
     blue_ignore_transparent disable;
 }
 
