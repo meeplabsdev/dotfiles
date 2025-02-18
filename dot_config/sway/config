@@ -22,11 +22,8 @@ exec xtdb -load ~/.Xresources
 exec walker --gapplication-service
 exec swayosd-server
 exec persway daemon -w -e 'spiral opacity 1' -f 'spiral opacity 0.95; opacity 1' -l 'mark --add _prev' -d spiral
-exec wal -i "${HOME}/wallpapers" -n
-exec pywalfox update
+exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
 exec uwsm app firefox
-exec_always swaymsg output "*" background $(< "${HOME}/.cache/wal/wal") fill
-exec_always uwsm start default
 
 ### Output configuration
 #
