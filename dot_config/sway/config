@@ -13,7 +13,7 @@ set $right l
 set $menu walker --modules applications
 
 ### Appearance
-default_border none
+default_border pixel 2
 gaps inner 10
 corner_radius 10
 smart_corner_radius enable
