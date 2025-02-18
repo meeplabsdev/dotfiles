@@ -56,6 +56,9 @@ input * {
     # Start a terminal
     bindsym $mod+Return exec uwsm app alacritty
 
+    # Start a file manager
+    bindsym $mod+e exec uwsm app doublecmd
+
     # Kill focused window
     bindsym $mod+c kill
 
