@@ -10,7 +10,7 @@ set $right l
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu walker --modules applications
+set $menu uwsm app walker -- -m
 
 ### Appearance
 default_border pixel 2
@@ -37,16 +37,16 @@ layer_effects "waybar" {
 
 
 ### Setup
+exec_always exec swaymsg output "*" background $(< "${HOME}/.cache/wal/wal") fill
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec xtdb -load ~/.Xresources
-exec walker --gapplication-service
 exec swayosd-server
 exec uwsm app swaync
 exec uwsm app swaymgr
 exec swaymgr -s 'set spiral'
+exec uwsm app walker -- --gapplication-service
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
 exec uwsm app notion-calendar-electron
-exec_always exec swaymsg output "*" background $(< "${HOME}/.cache/wal/wal") fill
 
 ### Output configuration
 #
@@ -86,7 +86,8 @@ input * {
     bindsym $mod+c kill
 
     # Start your launcher
-    bindsym $mod+r exec $menu
+    bindsym $mod+r exec $menu applications,calc,finder,runner
+    bindsym $mod+Semicolon exec $menu emojis,symbols
 
     # Take a screenshot
     bindsym Print exec sway-screenshot -m region --clipboard-only
