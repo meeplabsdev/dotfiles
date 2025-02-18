@@ -23,7 +23,7 @@ exec walker --gapplication-service
 exec swayosd-server
 exec persway daemon -w -e 'spiral opacity 1' -f 'spiral opacity 0.95; opacity 1' -l 'mark --add _prev' -d spiral
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
-exec uwsm app firefox
+#exec uwsm app firefox
 
 ### Output configuration
 #
