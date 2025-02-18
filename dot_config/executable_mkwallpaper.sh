@@ -9,7 +9,6 @@ fi
 
 wal -i $WALLPAPER -n
 swaymsg output "*" background $(< "${HOME}/.cache/wal/wal") fill
-cp ${HOME}/.cache/wal/walker.css ${HOME}/.config/walker/themes/theme.css
 
 pywalfox update
 killall walker || true
