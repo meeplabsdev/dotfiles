@@ -10,7 +10,7 @@ set $right l
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu uwsm app walker -- -m
+set $menu uwsm app walker -- -s theme -m
 
 ### Appearance
 default_border pixel 2
