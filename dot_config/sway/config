@@ -15,6 +15,26 @@ set $menu walker --modules applications
 ### Appearance
 default_border none
 gaps inner 10
+smart_corner_radius on
+corner_radius 15
+blur enable
+blur_xray enable
+blur_passes 2
+blur_radius 5
+blur_brightness 1
+blur_contrast 1
+blur_saturation 1
+shadows disable
+default_dim_inactive 0.05
+dim_inactive_colors.unfocused #000000FF
+dim_inactive_colors.urgent #900000FF
+
+layer_effects "waybar" {
+    blur enable;
+    blur_xray enable;
+    blue_ignore_transparent disable;
+}
+
 
 ### Setup
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
