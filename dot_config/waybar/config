@@ -15,7 +15,7 @@
         "network"
     ],
     "sway/workspaces": {
-        "format": "{icon}{name}",
+        "format": "{icon}",
         "format-icons": {
             "urgent": "󰀨",
             "focused": "󰝥",
