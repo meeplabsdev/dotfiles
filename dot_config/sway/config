@@ -86,8 +86,8 @@ input * {
     bindsym $mod+c kill
 
     # Start your launcher
-    bindsym $mod+r exec $menu applications,calc,finder,runner
-    bindsym $mod+Semicolon exec $menu emojis,symbols
+    bindsym $mod+r exec "$menu applications,calc,finder,runner"
+    bindsym $mod+Semicolon exec "$menu emojis,symbols"
 
     # Take a screenshot
     bindsym Print exec sway-screenshot -m region --clipboard-only
