@@ -21,7 +21,9 @@ exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DES
 exec xtdb -load ~/.Xresources
 exec walker --gapplication-service
 exec swayosd-server
-exec persway daemon -w -e 'spiral opacity 1' -f 'spiral opacity 0.95; opacity 1' -l 'mark --add _prev' -d spiral
+#exec persway daemon -w -e 'spiral opacity 1' -f 'spiral opacity 0.95; opacity 1' -l 'mark --add _prev' -d spiral
+exec uwsm app swaymgr
+exec swaymgr -s 'set spiral'
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
 exec uwsm app notion-calendar-electron
 
