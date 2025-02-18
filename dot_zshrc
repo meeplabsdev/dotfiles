@@ -26,7 +26,7 @@ else
 fi
 
 export ARCHFLAGS="-arch $(uname -m)"
-alias c = clear & pfetch
-alias cc = clear
+alias c="clear && pfetch"
+alias cc=clear
 
 pfetch
