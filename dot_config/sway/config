@@ -17,13 +17,14 @@ default_border pixel 2
 gaps inner 10
 corner_radius 10
 smart_corner_radius enable
+for_window [class=".*"] opacity 0.85; blur enable
 
 shadows enable
 shadows_on_csd enable
 shadow_blur_radius 20
 
 blur enable
-blur_xray disable
+blur_xray enabled
 blur_passes 4
 blur_radius 4
 default_dim_inactive 0.05
