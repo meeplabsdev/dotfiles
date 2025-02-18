@@ -13,4 +13,4 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-source ~/.bashrc
+source ~/.bash_profile
