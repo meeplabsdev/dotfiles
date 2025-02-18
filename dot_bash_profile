@@ -5,6 +5,6 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 if uwsm check may-start; then
-    exec uwsm start default
-    #exec uwsm start sway -- --unsupported-gpu
+    #exec uwsm start default
+    exec uwsm start sway -- --unsupported-gpu
 fi
