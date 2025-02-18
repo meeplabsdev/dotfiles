@@ -16,12 +16,16 @@ set $menu walker --modules applications
 default_border none
 gaps inner 10
 corner_radius 10
-blur disable
+smart_corner_radius enable
+
+shadows enable
+shadows_on_csd enable
+shadow_blur_radius 20
+
+blur enable
 blur_xray disable
-blur_brightness 1
-blur_contrast 1
-blur_saturation 1
-shadows disable
+blur_passes 4
+blur_radius 4
 default_dim_inactive 0.05
 
 layer_effects "waybar" {
