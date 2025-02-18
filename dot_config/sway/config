@@ -54,7 +54,7 @@ input * {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec uwsm app kitty
+    bindsym $mod+Return exec uwsm app alacritty
 
     # Kill focused window
     bindsym $mod+c kill
