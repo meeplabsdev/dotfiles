@@ -42,7 +42,7 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Install once-and-done software
-sudo pacman -S --needed --noconfirm alacritty pipewire wireplumber wayland qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts llvm llvm-libs meson wayland-protocols pcre2 json-c pango cairo gdk-pixbuf2 swaybg nvidia nvidia-dkms nvidia-utils vulkan-nouveau libdrm pixman polkit xdg-desktop-portal-wlr pipewire-jack waybar mpv uwsm otf-font-awesome python-pywal swaync code doublecmd-qt6 qt5ct qt6ct lxappearance zsh unzip
+sudo pacman -S --needed --noconfirm alacritty pipewire wireplumber wayland qt5-wayland qt6-wayland xorg-server xorg-server-common noto-fonts llvm llvm-libs meson wayland-protocols pcre2 json-c pango cairo gdk-pixbuf2 swaybg nvidia nvidia-dkms nvidia-utils vulkan-nouveau libdrm pixman polkit xdg-desktop-portal-wlr pipewire-jack waybar mpv uwsm otf-font-awesome python-pywal swaync code doublecmd-qt6 qt5ct qt6ct lxappearance zsh unzip libqalculate
 yay -S --needed --noconfirm downgrade sway-nvidia wlroots libva-nvidia-driver swaylock-no-password swayidle-git clipman sway-screenshot rustup swaymgr wdisplays-git swayosd-git wlogout walker firefox coppwr-bin python-pywalfox hyprpicker nerd-fonts-git cohesion-git notion-calendar-electron nwg-look qogir-icon-theme materia-gtk-theme illogical-impulse-bibata-modern-classic-bin pfetch-rs-bin
 
 # Install Shell Environment
