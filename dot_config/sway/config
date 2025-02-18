@@ -23,7 +23,7 @@ exec walker --gapplication-service
 exec swayosd-server
 exec persway daemon -w -e 'spiral opacity 1' -f 'spiral opacity 0.95; opacity 1' -l 'mark --add _prev' -d spiral
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
-#exec uwsm app firefox
+exec uwsm app notion-calendar-electron
 
 ### Output configuration
 #
@@ -64,6 +64,9 @@ input * {
 
     # Take a screenshot
     bindsym Print exec sway-screenshot -m region --clipboard-only
+
+    # Notion
+    bindsym $mod+n exec uwsm app cohesion
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
