@@ -14,3 +14,4 @@ pywalfox update
 killall walker || true
 uwsm app walker -- --gapplication-service
 uwsm app walker -- --modules applications
+exit 0
