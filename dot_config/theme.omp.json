@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "blue": "#89B4FA",
+    "closer": "p:os",
+    "lavender": "#B4BEFE",
+    "os": "#ACB0BE",
+    "pink": "#F5C2E7"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "newline": true,
+      "alignment": "left",
+      "segments": [
+        {
+          "style": "plain",
+          "template": "{{ .CurrentDate | date .Format }} ",
+          "foreground": "p:os",
+          "type": "time",
+          "properties": {
+            "time_format": "15:04"
+          }
+        },
+        {
+          "style": "plain",
+          "template": "{{ .UserName }}@{{ .HostName }} ",
+          "foreground": "p:blue",
+          "type": "session"
+        },
+        {
+          "properties": {
+            "folder_icon": "󰩮",
+            "home_icon": "~",
+            "style": "agnoster_short"
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "foreground": "p:pink",
+          "type": "path"
+        },
+        {
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          },
+          "style": "plain",
+          "template": "{{ .HEAD }} ",
+          "foreground": "p:lavender",
+          "type": "git"
+        },
+        {
+          "style": "plain",
+          "template": "\uf105",
+          "foreground": "p:closer",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "p:closer",
+          "properties": {
+            "threshold": 5000
+          }
+        }
+      ]
+    }
+  ],
+  "version": 3,
+  "final_space": true,
+  "enable_cursor_positioning": true,
+  "secondary_prompt": {
+    "template": "\uf105\uf105 ",
+    "foreground": "p:closer"
+  },
+  "transient_prompt": {
+    "foreground": "p:closer",
+    "template": "\uf105 "
+  }
+}
