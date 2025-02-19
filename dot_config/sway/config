@@ -57,8 +57,7 @@ exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DES
 exec xtdb -load ~/.Xresources
 exec swayosd-server
 exec uwsm app swaync
-exec uwsm app swaymgr
-exec swaymgr -s 'set spiral'
+exec uwsm app swaymgr && sleep 1 && swaymgr -s 'set spiral'
 exec uwsm app walker -- --gapplication-service
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
 exec uwsm app notion-calendar-widget
