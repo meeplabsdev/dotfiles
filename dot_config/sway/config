@@ -18,6 +18,7 @@ gaps inner 10
 corner_radius 10
 smart_corner_radius enable
 for_window [class=".*"] opacity 0.85; blur enable
+for_window [class="notion-calendar-widget"] resize set width 400 px; border none; inhibit_idle focus
 
 shadows enable
 shadows_on_csd enable
@@ -61,6 +62,7 @@ exec swaymgr -s 'set spiral'
 exec uwsm app walker -- --gapplication-service
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
 exec uwsm app notion-calendar-widget
+exec uwsm app firefox
 
 ### Output configuration
 #
