@@ -55,13 +55,13 @@ layer_effects "gtk-layer-shell" {
 exec_always exec swaymsg output "*" background $(< "${HOME}/.cache/wal/wal") fill
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec xtdb -load ~/.Xresources
+exec uwsm app notion-calendar-widget
+exec uwsm app alacritty
 exec swayosd-server
 exec uwsm app swaync
 exec uwsm app swaymgr && sleep 1 && swaymgr -s 'set spiral'
 exec uwsm app walker -- --gapplication-service
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
-exec uwsm app notion-calendar-widget
-exec uwsm app firefox
 
 ### Output configuration
 #
