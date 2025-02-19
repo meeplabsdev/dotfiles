@@ -63,6 +63,7 @@ slider,
   color: @foreground;
   min-width: 520px;
   min-height: 500px;
+  border: 2px solid @color1;
 }}
 
 #box {{
