@@ -1,6 +1,90 @@
+
 # Dotfiles
 
 The following are the dotfiles currently in use for my daily-driver arch-windows dual-boot workstation, managed using [`chezmoi`](https://www.chezmoi.io).
+
+|  |  |  |
+|--|--|--|
+| ![Example 1](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/example1.png) | ![Example 2](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/example2.png) | ![Example 3](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/example3.png) |
+|  |  |
+
+<br>
+<strong>🖼️ SwayFX (Nvidia)</strong>
+
+I am using my custom version of [SwayFX](https://github.com/WillPower3309/swayfx), with modifications to support a separate render system that allows the use of (modern) Nvidia cards (since the open source Nouveau drivers do not support my card - see [here](https://nouveau.freedesktop.org/FeatureMatrix.html)). It can be found on my GitHub [here](https://github.com/meeplabsdev/swayfx-nvidia), or on the AUR [here](https://aur.archlinux.org/packages/swayfx-nvidia). This allows SwayFX smoothly to run and prevents flickering.
+
+<details><summary><strong>🖳 Alacritty</strong></summary>
+
+Cross-platform, OpenGL terminal emulator. 
+![Alacritty](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/alacritty.png)
+[Learn More](https://github.com/alacritty/alacritty)
+
+</details>
+<details><summary><strong>🔓 NWG-Bar</strong></summary>
+
+GTK3-based button bar for wlroots-based compositors.
+![NWG-Bar](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/nwg-bar.png)
+[Learn More](https://github.com/nwg-piotr/nwg-bar)
+
+</details>
+<details><summary><strong>🔔 SwayNC</strong></summary>
+
+A simple GTK based notification daemon for SwayWM.
+![SwayNC](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/swaync.png)
+[Learn More](https://github.com/ErikReider/SwayNotificationCenter)
+
+</details>
+<details><summary><strong>🚀 Walker</strong></summary>
+
+Multi-Purpose Launcher with a lot of features. Highly Customizable and fast.
+![Walker](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/walker.png)
+[Learn More](https://github.com/abenz1267/walker)
+
+</details>
+<details><summary><strong>💡 Waybar</strong></summary>
+
+Highly customizable Wayland bar for Sway and Wlroots based compositors.
+![Waybar](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/waybar.png)
+[Learn More](https://github.com/Alexays/Waybar)
+
+</details>
+<details><summary><strong>🎨 PyWAL</strong></summary>
+
+Generate and change color-schemes on the fly.
+![PyWAL](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/wal.png)
+[Learn More](https://github.com/dylanaraps/pywal)
+
+</details>
+<details><summary><strong>💻 VS Code</strong></summary>
+
+Visual Studio Code - Installed with the "WAL Theme" extension so that it follows the PyWAL theme.
+![VS Code](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/vscode.png)
+[Learn More (VS Code)](https://github.com/microsoft/vscode)
+[Learn More (WAL Theme)](https://github.com/bluedrack/vscode-wal)
+
+</details>
+<details><summary><strong>💠 SwayMGR</strong></summary>
+
+Sway dynamic autotiling manager (Spiral Mode).
+![SwayMGR](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/swaymgr.png)
+[Learn More](https://github.com/Difrex/swaymgr)
+
+</details>
+<details><summary><strong>🦊 Firefox & PyWALFox</strong></summary>
+
+Dynamic theming of Firefox (and Thunderbird) using your Pywal colors.
+![PyWALFox](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/pywalfox.png)
+[Learn More (Firefox)](https://github.com/mozilla/gecko-dev)
+[Learn More (PyWALFox)](https://github.com/Frewacom/pywalfox)
+
+</details>
+<details><summary><strong>📅 Notion Calendar Widget</strong></summary>
+
+A widget window that displays notion calendar as a compact sidebar, that also responds to PYWAL themes.
+![Notion Calendar Widget](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/notion-calendar-widget.png)
+[Learn More](https://github.com/meeplabsdev/notion-calendar-widget)
+
+</details>
 
 # Install
 
@@ -86,6 +170,7 @@ And that's everything! The only step that you may want to take is to `sudo pacma
 
 The output of `pacman -Q` at the time of writing is as follows:
 ```
+7zip 24.09-3
 abseil-cpp 20240722.1-1
 acl 2.3.2-1
 adobe-source-code-pro-fonts 2.042u+1.062i+1.026vf-2
@@ -100,6 +185,7 @@ alsa-ucm-conf 1.2.13-2
 aom 3.12.0-1
 aquamarine-git-debug 0.7.2_r268.gf239e5a-1
 archlinux-keyring 20250123-1
+asar 3.3.1-2
 at-spi2-core 2.54.1-1
 atkmm 2.28.4-1
 attr 2.5.2-1
@@ -129,7 +215,6 @@ clipman 1.6.4-1
 clipman-debug 1.6.4-1
 cmake 3.31.5-1
 code 1.97.2-1
-cohesion-git r196.g26a1e96-1
 cohesion-git-debug r196.g26a1e96-1
 coppwr-bin 1.6.1-1
 coppwr-bin-debug 1.6.1-1
@@ -152,7 +237,7 @@ diffutils 3.10-1
 dkms 3.1.5-1
 double-conversion 3.3.1-1
 doublecmd-qt6 1.1.22-3
-downgrade 11.4.3-1
+downgrade 11.4.4-1
 duktape 2.7.0-7
 e2fsprogs 1.47.2-1
 egl-gbm 1.1.2-1
@@ -160,6 +245,7 @@ egl-wayland 4:1.1.17-1
 eglexternalplatform 1.2-2
 electron 1:34-1
 electron32 32.3.1-1
+electron33 33.4.1-1
 electron34 34.2.0-1
 expat 2.6.4-1
 fakeroot 1.37-1
@@ -168,7 +254,7 @@ fftw 3.3.10-7
 file 5.46-3
 filesystem 2024.11.21-1
 findutils 4.10.0-2
-firefox 135.0-1
+firefox 135.0.1-1
 flac 1.4.3-2
 flex 2.6.4-5
 fmt 11.1.3-1
@@ -178,7 +264,7 @@ fribidi 1.0.16-1
 fuse-common 3.16.2-1
 fuse2 2.9.9-5
 fuse3 3.16.2-1
-fzf 0.59.0-1
+fzf 0.60.0-1
 gawk 5.3.1-1
 gc 8.2.8-2
 gcc 14.2.1+r753+g1cd744a6828f-1
@@ -189,7 +275,7 @@ gettext 0.23.1-2
 giflib 5.2.2-1
 git 2.48.1-2
 github-cli 2.67.0-1
-glaze 4.4.2-1
+glaze 4.4.3-1
 glib-networking 1:2.80.1-1
 glib2 2.82.4-2
 glibc 2.41+r6+gcf88351b685d-1
@@ -237,7 +323,7 @@ hidapi 0.14.0-3
 highway 1.2.0-1
 hwdata 0.392-1
 hyprpicker 0.4.2-3
-hyprutils 0.5.0-1
+hyprutils 0.5.1-1
 hyprwayland-scanner 0.4.4-1
 iana-etc 20241206-1
 icu 75.1-2
@@ -327,6 +413,7 @@ libldac 2.0.2.3-2
 libldap 2.6.9-1
 libliftoff 0.5.0-1
 liblqr 0.4.3-1
+libluv 1.48.0_2-1
 libmd 1.1.0-2
 libmm-glib 1.22.0-1
 libmnl 1.0.5-2
@@ -356,10 +443,11 @@ libpgm 5.3.128-3
 libpipewire 1:1.2.7-1
 libplacebo 7.349.0-4
 libplist 2.6.0-2
-libpng 1.6.46-1
+libpng 1.6.47-1
 libproxy 0.5.9-1
 libpsl 0.21.5-2
 libpulse 17.0+r43+g3e2bb8a1e-1
+libqalculate 5.5.0-1
 libraqm 0.10.2-1
 libraw1394 2.1.2-4
 librsvg 2:2.59.2-1
@@ -391,6 +479,7 @@ libunistring 1.3-1
 libunwind 1.8.1-3
 libusb 1.0.27-1
 libusbmuxd 2.1.0-1
+libutf8proc 2.10.0-1
 libuv 1.50.0-1
 libva 2.22.0-1
 libva-nvidia-driver 0.0.13-1
@@ -400,6 +489,7 @@ libvips 8.16.0-2
 libvorbis 1.3.7-4
 libvpl 2.14.0-1
 libvpx 1.15.0-1
+libvterm 0.3.3-2
 libwacom 2.14.0-1
 libwebp 1.5.0-1
 libwireplumber 0.5.8-1
@@ -408,7 +498,6 @@ libxau 1.0.12-1
 libxcb 1.17.0-1
 libxcomposite 0.4.6-2
 libxcrypt 4.4.38-1
-libxcrypt-compat 4.4.38-1
 libxcursor 1.2.3-1
 libxcvt 0.1.3-1
 libxdamage 1.1.6-2
@@ -450,6 +539,7 @@ llvm18-libs 18.1.8-1
 lm_sensors 1:3.6.0.r41.g31d1f125-3
 lmdb 0.9.33-1
 lua 5.4.7-1
+lua51-lpeg 1.1.0-3
 luajit 2.1.1736781742-1
 lv2 1.18.10-1
 lxappearance 0.6.3-5
@@ -470,10 +560,12 @@ mpdecimal 4.0.0-2
 mpfr 4.2.1-6
 mpg123 1.32.10-1
 mpv 1:0.39.0-4
+msgpack-c 6.1.0-2
 mtdev 1.1.7-1
 mujs 1.3.6-1
 nano 8.3-1
 ncurses 6.5-3
+neovim 0.10.4-2
 nerd-fonts-git 1:3.3.0.r66.g92901a4db-1
 nettle 3.10.1-1
 networkmanager 1.50.2-1
@@ -481,8 +573,13 @@ ninja 1.12.1-2
 node-gyp 11.1.0-3
 nodejs 23.8.0-1
 nodejs-nopt 7.2.1-1
+notion-app-electron 4.3.0-1
+notion-app-electron-debug 4.3.0-1
+notion-app-enhanced-debug 2.0.18-1
 notion-calendar-electron 1.0.4-1
 notion-calendar-electron-debug 1.0.4-1
+notion-calendar-widget 1.0.0-1
+notion-calendar-widget-debug 1.0.0-1
 noto-fonts 1:2025.02.01-1
 npm 11.1.0-2
 npth 1.8-1
@@ -492,6 +589,7 @@ ntfs-3g 2022.10.3-1
 nvidia-dkms 560.35.03-6
 nvidia-utils 560.35.03-6
 nvm 0.40.1-1
+nwg-bar 0.1.6-2
 nwg-look 1.0.2-1
 ocl-icd 2.3.2-2
 oniguruma 6.9.10-1
@@ -635,8 +733,7 @@ swayfx-git-debug r7070.50d4cf45-1
 swayfx-nvidia 1.0.8-1
 swayidle-git 1.8.0.r13.gf13cefa-1
 swayidle-git-debug 1.8.0.r13.gf13cefa-1
-swaylock-git 1.8.0.r5.ga439abb-1
-swaylock-git-debug 1.8.0.r5.ga439abb-1
+swaylock-no-password-debug 1.7.2-1
 swaymgr 0.1.1-1
 swaymgr-debug 0.1.1-1
 swaync 0.10.1-3
@@ -649,9 +746,17 @@ tar 1.35-2
 texinfo 7.2-1
 tinysparql 3.8.2-2
 tpm2-tss 4.1.3-1
+tree-sitter 0.25.1-1
+tree-sitter-c 0.23.5-1
+tree-sitter-lua 0.2.0-1
+tree-sitter-markdown 0.3.1-1
+tree-sitter-query 0.5.0-1
+tree-sitter-vim 0.4.0-1
+tree-sitter-vimdoc 3.0.0-1
 tslib 1.23-1
 tzdata 2025a-1
 uchardet 0.0.8-3
+unibilium 2.1.2-1
 unzip 6.0-22
 upower 1.90.7-1
 util-linux 2.40.4-1
@@ -676,7 +781,6 @@ webrtc-audio-processing-1 1.3-4
 which 2.21-6
 wireplumber 0.5.8-1
 wl-clipboard 1:2.2.1-2
-wlogout 1.2.2-0
 wlogout-debug 1.2.2-0
 wlroots 0.18.2-1
 wlroots0.17-debug 0.17.4-1
