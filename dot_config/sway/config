@@ -60,7 +60,7 @@ exec uwsm app swaymgr
 exec swaymgr -s 'set spiral'
 exec uwsm app walker -- --gapplication-service
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
-exec uwsm app notion-calendar-electron
+exec uwsm app notion-calendar-widget
 
 ### Output configuration
 #
