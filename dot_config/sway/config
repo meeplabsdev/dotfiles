@@ -18,6 +18,7 @@ gaps inner 10
 corner_radius 10
 smart_corner_radius enable
 for_window [class=".*"] opacity 0.85; blur enable
+for_window [app_id="dev.benz.walker"] opacity 0.85; blur enable; border pixel 2
 
 shadows enable
 shadows_on_csd enable
@@ -33,6 +34,12 @@ layer_effects "waybar" {
     blur disable;
     blur_xray disable;
     blue_ignore_transparent disable;
+}
+
+layer_effects "walker" {
+    blur enable;
+    corner_radius 10;
+    shadows enable;
 }
 
 
