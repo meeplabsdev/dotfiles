@@ -61,12 +61,18 @@ slider,
   border-radius: 10px;
   background-color: alpha(@background, 0.85);
   color: @foreground;
+  min-width: 520px;
+  min-height: 500px;
 }}
 
 #box {{
   margin: 2px;
   padding: 5px;
   border: none;
+}}
+
+#box #listplaceholder {{
+  color: transparent;
 }}
 
 #search {{
@@ -81,6 +87,7 @@ slider,
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   background-color: alpha(@color4, 0.05);
+  min-width: 480px;
 }}
 
 #search image {{
@@ -148,6 +155,7 @@ child {{
   border: none;
   margin: 5px;
   padding: 10px;
+  background-color: alpha(@color4, 0.002);
 }}
 
 child:selected,
@@ -155,7 +163,7 @@ child:hover {{
   box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.03);
   border: none;
   border-radius: 20px;
-  background-color: transparent;
+  background-color: alpha(@color4, 0.05);
 }}
 
 #item {{
