@@ -18,7 +18,6 @@ gaps inner 10
 corner_radius 10
 smart_corner_radius enable
 for_window [class=".*"] opacity 0.85; blur enable
-for_window [app_id="dev.benz.walker"] opacity 0.85; blur enable; border pixel 2
 
 shadows enable
 shadows_on_csd enable
@@ -38,6 +37,7 @@ layer_effects "waybar" {
 
 layer_effects "walker" {
     blur enable;
+    blur_xray disable;
     corner_radius 10;
     shadows enable;
 }
@@ -93,7 +93,7 @@ input * {
     bindsym $mod+c kill
 
     # Start your launcher
-    bindsym $mod+r exec "$menu applications,calc,finder,runner"
+    bindsym $mod+r exec "$menu applications,calc,finder"
     bindsym $mod+Semicolon exec "$menu emojis,symbols"
 
     # Take a screenshot
