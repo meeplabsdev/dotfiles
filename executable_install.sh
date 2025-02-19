@@ -50,10 +50,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 curl -s https://ohmyposh.dev/install.sh | bash -s
 sudo chsh -s $(which zsh) ${USER}
 
-# Finalise
+# Finish up
 sudo systemctl set-default graphical.target
 sudo systemctl enable swayosd-libinput-backend.service
 sudo usermod -a -G video $USER
 pywalfox install && sudo pywalfox install
-
-reboot
