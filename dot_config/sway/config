@@ -37,7 +37,7 @@ layer_effects "waybar" {
 
 layer_effects "walker" {
     blur enable;
-    blur_xray disable;
+    blur_xray enable;
     corner_radius 10;
     shadows enable;
 }
