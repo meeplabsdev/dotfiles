@@ -43,14 +43,14 @@
         "escape": true
     },
     "custom/pomodoro": {
-        "format": "{}",
+        "format": "{} ",
         "return-type": "json",
         "exec": "waybar-module-pomodoro --autow --autob --persist",
         "on-click": "waybar-module-pomodoro --autow --autob --persist toggle",
         "on-click-right": "waybar-module-pomodoro --autow --autob --persist reset"
     },
     "clock": {
-        "format": "{:%H:%M} ",
+        "format": "{:%H:%M}",
         "interval": 1,
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
