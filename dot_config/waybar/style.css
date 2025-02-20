@@ -41,6 +41,7 @@ tooltip {
 #clock:hover,
 #custom-pacman:hover,
 #custom-notification:hover,
+#custom-pomodoro:hover,
 #bluetooth:hover,
 #network:hover,
 #battery:hover,
@@ -50,18 +51,6 @@ tooltip {
 #custom-colorpicker:hover {
     transition: all .1s ease;
     color: @color9;
-}
-
-#custom-notification {
-    padding: 0px 5px;
-    transition: all .1s ease;
-    color: @color7;
-}
-
-#clock {
-    padding: 0px 5px;
-    color: @color7;
-    transition: all .1s ease;
 }
 
 #workspaces {
@@ -81,18 +70,6 @@ tooltip {
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
 }
 
-#network {
-    padding: 0px 5px;
-    transition: all .1s ease;
-    color: @color7;
-
-}
-
-#group-expand {
-    padding: 0px 5px;
-    transition: all .1s ease;
-}
-
 #custom-expand {
     padding: 0px 5px;
     color: alpha(@foreground, .2);
@@ -108,30 +85,24 @@ tooltip {
 #cpu,
 #memory,
 #temperature,
+#group-expand,
+#network,
+#clock,
+#custom-notification,
+#custom-pomodoro,
 #custom-colorpicker {
     padding: 0px 5px;
     transition: all .1s ease;
     color: @color7;
-
 }
 
 #custom-endpoint {
     color: transparent;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
-
 }
 
-#tray {
-    padding: 0px 5px;
-    transition: all .1s ease;
-
-}
-
-#tray menu * {
-    padding: 0px 5px;
-    transition: all .1s ease;
-}
-
+#tray,
+#tray menu *,
 #tray menu separator {
     padding: 0px 5px;
     transition: all .1s ease;
