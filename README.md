@@ -10,55 +10,70 @@ The following are the dotfiles currently in use for my daily-driver arch-windows
 
 <br>
 <strong>🖼️ SwayFX (Nvidia)</strong>
+<br>
 
 I am using my custom version of [SwayFX](https://github.com/WillPower3309/swayfx), with modifications to support a separate render system that allows the use of (modern) Nvidia cards (since the open source Nouveau drivers do not support my card - see [here](https://nouveau.freedesktop.org/FeatureMatrix.html)). It can be found on my GitHub [here](https://github.com/meeplabsdev/swayfx-nvidia), or on the AUR [here](https://aur.archlinux.org/packages/swayfx-nvidia). This allows SwayFX smoothly to run and prevents flickering.
 
 <details><summary><strong>🖳 Alacritty</strong></summary>
 
-Cross-platform, OpenGL terminal emulator. 
+Cross-platform, OpenGL terminal emulator.
+
 ![Alacritty](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/alacritty.png)
+
 [Learn More](https://github.com/alacritty/alacritty)
 
 </details>
 <details><summary><strong>🔓 NWG-Bar</strong></summary>
 
 GTK3-based button bar for wlroots-based compositors.
+
 ![NWG-Bar](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/nwg-bar.png)
+
 [Learn More](https://github.com/nwg-piotr/nwg-bar)
 
 </details>
 <details><summary><strong>🔔 SwayNC</strong></summary>
 
 A simple GTK based notification daemon for SwayWM.
+
 ![SwayNC](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/swaync.png)
+
 [Learn More](https://github.com/ErikReider/SwayNotificationCenter)
 
 </details>
 <details><summary><strong>🚀 Walker</strong></summary>
 
 Multi-Purpose Launcher with a lot of features. Highly Customizable and fast.
+
 ![Walker](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/walker.png)
+
 [Learn More](https://github.com/abenz1267/walker)
 
 </details>
 <details><summary><strong>💡 Waybar</strong></summary>
 
 Highly customizable Wayland bar for Sway and Wlroots based compositors.
+
 ![Waybar](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/waybar.png)
+
 [Learn More](https://github.com/Alexays/Waybar)
 
 </details>
 <details><summary><strong>🎨 PyWAL</strong></summary>
 
 Generate and change color-schemes on the fly.
+
 ![PyWAL](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/wal.png)
+
 [Learn More](https://github.com/dylanaraps/pywal)
 
 </details>
 <details><summary><strong>💻 VS Code</strong></summary>
 
 Visual Studio Code - Installed with the "WAL Theme" extension so that it follows the PyWAL theme.
+
 ![VS Code](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/vscode.png)
+
 [Learn More (VS Code)](https://github.com/microsoft/vscode)
 [Learn More (WAL Theme)](https://github.com/bluedrack/vscode-wal)
 
@@ -66,14 +81,18 @@ Visual Studio Code - Installed with the "WAL Theme" extension so that it follows
 <details><summary><strong>💠 SwayMGR</strong></summary>
 
 Sway dynamic autotiling manager (Spiral Mode).
+
 ![SwayMGR](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/swaymgr.png)
+
 [Learn More](https://github.com/Difrex/swaymgr)
 
 </details>
 <details><summary><strong>🦊 Firefox & PyWALFox</strong></summary>
 
 Dynamic theming of Firefox (and Thunderbird) using your Pywal colors.
+
 ![PyWALFox](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/pywalfox.png)
+
 [Learn More (Firefox)](https://github.com/mozilla/gecko-dev)
 [Learn More (PyWALFox)](https://github.com/Frewacom/pywalfox)
 
@@ -81,7 +100,9 @@ Dynamic theming of Firefox (and Thunderbird) using your Pywal colors.
 <details><summary><strong>📅 Notion Calendar Widget</strong></summary>
 
 A widget window that displays notion calendar as a compact sidebar, that also responds to PYWAL themes.
+
 ![Notion Calendar Widget](https://raw.githubusercontent.com/meeplabsdev/dotfiles/refs/heads/main/assets/notion-calendar-widget.png)
+
 [Learn More](https://github.com/meeplabsdev/notion-calendar-widget)
 
 </details>
