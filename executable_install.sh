@@ -50,6 +50,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 curl -s https://ohmyposh.dev/install.sh | bash -s
 sudo chsh -s $(which zsh) ${USER}
 
+# Install waybar-module-pomodoro
+git clone https://github.com/Andeskjerf/waybar-module-pomodoro
+cd waybar-module-pomodoro
+rustup default stable
+cargo build --release
+cp target/release/waybar-module-pomodoro ~/.local/bin
+sudo ln -s ~/.local/bin/waybar-module-pomodoro /usr/bin/waybar-module-pomodoro
+cd ..
+rm -rf waybar-module-pomodoro
+
 # Finish up
 sudo systemctl set-default graphical.target
 sudo systemctl enable swayosd-libinput-backend.service
