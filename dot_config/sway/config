@@ -56,7 +56,7 @@ exec_always exec swaymsg output "*" background $(< "${HOME}/.cache/wal/wal") fil
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec xtdb -load ~/.Xresources
 exec uwsm app notion-calendar-widget
-exec uwsm app alacritty
+exec uwsm app obsidian
 exec swayosd-server
 exec uwsm app swaync
 exec uwsm app swaymgr && sleep 1 && swaymgr -s 'set spiral'
