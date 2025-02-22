@@ -8,8 +8,6 @@ set $down j
 set $up k
 set $right l
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
 set $menu uwsm app walker -- -s theme -m
 
 ### Appearance
@@ -257,7 +255,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-# bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
 
 #
 # Status Bar:
