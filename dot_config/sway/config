@@ -65,8 +65,13 @@ exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
 ### Output configuration
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 output * bg #000000 solid_color
-output * resolution 1920x1080 position 1920,0
-# output * mirror
+output DP-1 resolution 1920x1080 position 1920,0
+output HDMI-A-1 resolution 1920x1080 position 0,0
+
+workspace pikvm output HDMI-A-1
+assign [workspace="pikvm"] output HDMI-A-1
+exec_always swaymsg "workspace pikvm; move workspace to output HDMI-A-1; workspace 1"
+exec wl-mirror --region '1920,0 1920x1080' --fullscreen-output HDMI-A-1 DP-1
 
 ### Lock button
 bindsym $mod+l exec nwg-bar
