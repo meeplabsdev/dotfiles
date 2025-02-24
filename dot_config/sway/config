@@ -53,13 +53,14 @@ layer_effects "gtk-layer-shell" {
 exec_always exec swaymsg output "*" background $(< "${HOME}/.cache/wal/wal") fill
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec xtdb -load ~/.Xresources
-exec bash -c "uwsm app obsidian && sleep 3 && uwsm app notion-calendar-widget"
+exec uwsm app alacritty
+exec uwsm app notion-calendar-widget
 exec swayosd-server
 exec uwsm app swaync
 exec uwsm app swaymgr && sleep 1 && swaymgr -s 'set spiral'
 exec uwsm app walker -- --gapplication-service
 exec bash ${HOME}/.config/mkwallpaper.sh ${HOME}/wallpapers
-exex bash -c "sudo perf record -a -g -- sleep 60"
+exec bash -c "sudo perf record -a -g -- sleep 60"
 
 ### Output configuration
 # You can get the names of your outputs by running: swaymsg -t get_outputs
