@@ -4,6 +4,8 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-if uwsm check may-start && uwsm select; then
+if uwsm check may-start; then
     exec uwsm start swayfx-nvidia
 fi
+
+. "$HOME/.local/share/../bin/env"
