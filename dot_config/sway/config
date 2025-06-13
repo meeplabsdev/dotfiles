@@ -11,7 +11,7 @@ set $right l
 set $menu uwsm app walker -- -s theme -m
 
 ### Appearance
-default_border pixel 2
+default_border pixel 0
 gaps inner 10
 corner_radius 10
 smart_corner_radius enable
@@ -26,7 +26,7 @@ blur enable
 blur_xray enabled
 blur_passes 4
 blur_radius 4
-default_dim_inactive 0.05
+default_dim_inactive 0.2
 
 layer_effects "waybar" {
     blur disable;
