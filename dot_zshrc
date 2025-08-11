@@ -46,3 +46,5 @@ alias cc=clear
 
 pfetch
 eval "$(oh-my-posh init zsh --config '~/.config/theme.omp.json')"
+
+. "$HOME/.local/share/../bin/env"

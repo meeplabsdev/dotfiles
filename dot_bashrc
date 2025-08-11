@@ -13,3 +13,5 @@ PS1='[\u@\h \W]\$ '
 
 cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
+
+. "$HOME/.local/share/../bin/env"
