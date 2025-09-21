@@ -164,6 +164,9 @@ input * {
     bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
     # XF86AudioPlayPause workaround
     bindcode 172 exec playerctl play-pause
+    # Next and Prev
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
 
     # Capslock (If you don't want to use the backend)
 #    bindsym --release Caps_Lock exec swayosd-client --caps-lock
